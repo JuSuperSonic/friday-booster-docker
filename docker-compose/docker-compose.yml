@@ -1,0 +1,50 @@
+version: "3.8"
+services:
+#======================================
+#======= friday-booster service =======
+#======================================
+  friday-booster:
+    image: friday-booster:latest
+    ports:
+      - 9191:9191
+    networks:
+      - friday_booster_network
+    volumes:
+      - log-data:/var/log/fridaybooster
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+      - PostgreSQL
+#==================================
+#======= PostgreSQL service =======
+#==================================
+  PostgreSQL:
+    image: postgres:alpine
+    networks:
+      - friday_booster_network
+    volumes:
+      - db-data:/var/lib/postgresql/data/pg_data
+    environment:
+      - POSTGRES_DB=fridaybooster
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pg_data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+#========================
+#======= networks =======
+#========================
+networks:
+  friday_booster_network:
+#=======================
+#======= volumes =======
+#=======================
+volumes:
+  db-data:
+  log-data:

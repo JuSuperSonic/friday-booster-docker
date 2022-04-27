@@ -1,0 +1,4382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Asciidoctor 2.0.8.dev">
+  <title>Friday Booster</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+  <style>
+    /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+    /* Uncomment @import statement to use as custom stylesheet */
+    /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section {
+      display: block
+    }
+
+    audio,
+    video {
+      display: inline-block
+    }
+
+    audio:not([controls]) {
+      display: none;
+      height: 0
+    }
+
+    html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+    }
+
+    a {
+      background: none
+    }
+
+    a:focus {
+      outline: thin dotted
+    }
+
+    a:active,
+    a:hover {
+      outline: 0
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: .67em 0
+    }
+
+    abbr[title] {
+      border-bottom: 1px dotted
+    }
+
+    b,
+    strong {
+      font-weight: bold
+    }
+
+    dfn {
+      font-style: italic
+    }
+
+    hr {
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      height: 0
+    }
+
+    mark {
+      background: #ff0;
+      color: #000
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: monospace;
+      font-size: 1em
+    }
+
+    pre {
+      white-space: pre-wrap
+    }
+
+    q {
+      quotes: "\201C""\201D""\2018""\2019"
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    img {
+      border: 0
+    }
+
+    svg:not(:root) {
+      overflow: hidden
+    }
+
+    figure {
+      margin: 0
+    }
+
+    fieldset {
+      border: 1px solid silver;
+      margin: 0 2px;
+      padding: .35em .625em .75em
+    }
+
+    legend {
+      border: 0;
+      padding: 0
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      margin: 0
+    }
+
+    button,
+    input {
+      line-height: normal
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    html input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      -webkit-appearance: button;
+      cursor: pointer
+    }
+
+    button[disabled],
+    html input[disabled] {
+      cursor: default
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      box-sizing: border-box;
+      padding: 0
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+      border: 0;
+      padding: 0
+    }
+
+    textarea {
+      overflow: auto;
+      vertical-align: top
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    *,
+    *::before,
+    *::after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      font-size: 100%
+    }
+
+    body {
+      background: #fff;
+      color: rgba(0, 0, 0, .8);
+      padding: 0;
+      margin: 0;
+      font-family: "Noto Serif", "DejaVu Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1;
+      position: relative;
+      cursor: auto;
+      tab-size: 4;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased
+    }
+
+    a:hover {
+      cursor: pointer
+    }
+
+    img,
+    object,
+    embed {
+      max-width: 100%;
+      height: auto
+    }
+
+    object,
+    embed {
+      height: 100%
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic
+    }
+
+    .left {
+      float: left !important
+    }
+
+    .right {
+      float: right !important
+    }
+
+    .text-left {
+      text-align: left !important
+    }
+
+    .text-right {
+      text-align: right !important
+    }
+
+    .text-center {
+      text-align: center !important
+    }
+
+    .text-justify {
+      text-align: justify !important
+    }
+
+    .hide {
+      display: none
+    }
+
+    img,
+    object,
+    svg {
+      display: inline-block;
+      vertical-align: middle
+    }
+
+    textarea {
+      height: auto;
+      min-height: 50px
+    }
+
+    select {
+      width: 100%
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .stretch {
+      width: 100%
+    }
+
+    .subheader,
+    .admonitionblock td.content>.title,
+    .audioblock>.title,
+    .exampleblock>.title,
+    .imageblock>.title,
+    .listingblock>.title,
+    .literalblock>.title,
+    .stemblock>.title,
+    .openblock>.title,
+    .paragraph>.title,
+    .quoteblock>.title,
+    table.tableblock>.title,
+    .verseblock>.title,
+    .videoblock>.title,
+    .dlist>.title,
+    .olist>.title,
+    .ulist>.title,
+    .qlist>.title,
+    .hdlist>.title {
+      line-height: 1.45;
+      color: #7a2518;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: .25em
+    }
+
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    #toctitle,
+    .sidebarblock>.content>.title,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    p,
+    blockquote,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+      direction: ltr
+    }
+
+    a {
+      color: #2156a5;
+      text-decoration: underline;
+      line-height: inherit
+    }
+
+    a:hover,
+    a:focus {
+      color: #1d4b8f
+    }
+
+    a img {
+      border: 0
+    }
+
+    p {
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 1.25em;
+      text-rendering: optimizeLegibility
+    }
+
+    p aside {
+      font-size: .875em;
+      line-height: 1.35;
+      font-style: italic
+    }
+
+    h1,
+    h2,
+    h3,
+    #toctitle,
+    .sidebarblock>.content>.title,
+    h4,
+    h5,
+    h6 {
+      font-family: "Open Sans", "DejaVu Sans", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      color: #ba3925;
+      text-rendering: optimizeLegibility;
+      margin-top: 1em;
+      margin-bottom: .5em;
+      line-height: 1.0125em
+    }
+
+    h1 small,
+    h2 small,
+    h3 small,
+    #toctitle small,
+    .sidebarblock>.content>.title small,
+    h4 small,
+    h5 small,
+    h6 small {
+      font-size: 60%;
+      color: #e99b8f;
+      line-height: 0
+    }
+
+    h1 {
+      font-size: 2.125em
+    }
+
+    h2 {
+      font-size: 1.6875em
+    }
+
+    h3,
+    #toctitle,
+    .sidebarblock>.content>.title {
+      font-size: 1.375em
+    }
+
+    h4,
+    h5 {
+      font-size: 1.125em
+    }
+
+    h6 {
+      font-size: 1em
+    }
+
+    hr {
+      border: solid #dddddf;
+      border-width: 1px 0 0;
+      clear: both;
+      margin: 1.25em 0 1.1875em;
+      height: 0
+    }
+
+    em,
+    i {
+      font-style: italic;
+      line-height: inherit
+    }
+
+    strong,
+    b {
+      font-weight: bold;
+      line-height: inherit
+    }
+
+    small {
+      font-size: 60%;
+      line-height: inherit
+    }
+
+    code {
+      font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+      font-weight: 400;
+      color: rgba(0, 0, 0, .9)
+    }
+
+    ul,
+    ol,
+    dl {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 1.25em;
+      list-style-position: outside;
+      font-family: inherit
+    }
+
+    ul,
+    ol {
+      margin-left: 1.5em
+    }
+
+    ul li ul,
+    ul li ol {
+      margin-left: 1.25em;
+      margin-bottom: 0;
+      font-size: 1em
+    }
+
+    ul.square li ul,
+    ul.circle li ul,
+    ul.disc li ul {
+      list-style: inherit
+    }
+
+    ul.square {
+      list-style-type: square
+    }
+
+    ul.circle {
+      list-style-type: circle
+    }
+
+    ul.disc {
+      list-style-type: disc
+    }
+
+    ol li ul,
+    ol li ol {
+      margin-left: 1.25em;
+      margin-bottom: 0
+    }
+
+    dl dt {
+      margin-bottom: .3125em;
+      font-weight: bold
+    }
+
+    dl dd {
+      margin-bottom: 1.25em
+    }
+
+    abbr,
+    acronym {
+      text-transform: uppercase;
+      font-size: 90%;
+      color: rgba(0, 0, 0, .8);
+      border-bottom: 1px dotted #ddd;
+      cursor: help
+    }
+
+    abbr {
+      text-transform: none
+    }
+
+    blockquote {
+      margin: 0 0 1.25em;
+      padding: .5625em 1.25em 0 1.1875em;
+      border-left: 1px solid #ddd
+    }
+
+    blockquote cite {
+      display: block;
+      font-size: .9375em;
+      color: rgba(0, 0, 0, .6)
+    }
+
+    blockquote cite::before {
+      content: "\2014 \0020"
+    }
+
+    blockquote cite a,
+    blockquote cite a:visited {
+      color: rgba(0, 0, 0, .6)
+    }
+
+    blockquote,
+    blockquote p {
+      line-height: 1.6;
+      color: rgba(0, 0, 0, .85)
+    }
+
+    @media screen and (min-width:768px) {
+
+      h1,
+      h2,
+      h3,
+      #toctitle,
+      .sidebarblock>.content>.title,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.2
+      }
+
+      h1 {
+        font-size: 2.75em
+      }
+
+      h2 {
+        font-size: 2.3125em
+      }
+
+      h3,
+      #toctitle,
+      .sidebarblock>.content>.title {
+        font-size: 1.6875em
+      }
+
+      h4 {
+        font-size: 1.4375em
+      }
+    }
+
+    table {
+      background: #fff;
+      margin-bottom: 1.25em;
+      border: solid 1px #dedede
+    }
+
+    table thead,
+    table tfoot {
+      background: #f7f8f7
+    }
+
+    table thead tr th,
+    table thead tr td,
+    table tfoot tr th,
+    table tfoot tr td {
+      padding: .5em .625em .625em;
+      font-size: inherit;
+      color: rgba(0, 0, 0, .8);
+      text-align: left
+    }
+
+    table tr th,
+    table tr td {
+      padding: .5625em .625em;
+      font-size: inherit;
+      color: rgba(0, 0, 0, .8)
+    }
+
+    table tr.even,
+    table tr.alt {
+      background: #f8f8f7
+    }
+
+    table thead tr th,
+    table tfoot tr th,
+    table tbody tr td,
+    table tr td,
+    table tfoot tr td {
+      display: table-cell;
+      line-height: 1.6
+    }
+
+    h1,
+    h2,
+    h3,
+    #toctitle,
+    .sidebarblock>.content>.title,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2;
+      word-spacing: -.05em
+    }
+
+    h1 strong,
+    h2 strong,
+    h3 strong,
+    #toctitle strong,
+    .sidebarblock>.content>.title strong,
+    h4 strong,
+    h5 strong,
+    h6 strong {
+      font-weight: 400
+    }
+
+    .clearfix::before,
+    .clearfix::after,
+    .float-group::before,
+    .float-group::after {
+      content: " ";
+      display: table
+    }
+
+    .clearfix::after,
+    .float-group::after {
+      clear: both
+    }
+
+    :not(pre):not([class^=L])>code {
+      font-size: .9375em;
+      font-style: normal !important;
+      letter-spacing: 0;
+      padding: .1em .5ex;
+      word-spacing: -.15em;
+      background: #f7f7f8;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      line-height: 1.45;
+      text-rendering: optimizeSpeed;
+      word-wrap: break-word
+    }
+
+    :not(pre)>code.nobreak {
+      word-wrap: normal
+    }
+
+    :not(pre)>code.nowrap {
+      white-space: nowrap
+    }
+
+    pre {
+      color: rgba(0, 0, 0, .9);
+      font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+      line-height: 1.45;
+      text-rendering: optimizeSpeed
+    }
+
+    pre code,
+    pre pre {
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit
+    }
+
+    pre>code {
+      display: block
+    }
+
+    pre.nowrap,
+    pre.nowrap pre {
+      white-space: pre;
+      word-wrap: normal
+    }
+
+    em em {
+      font-style: normal
+    }
+
+    strong strong {
+      font-weight: 400
+    }
+
+    .keyseq {
+      color: rgba(51, 51, 51, .8)
+    }
+
+    kbd {
+      font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+      display: inline-block;
+      color: rgba(0, 0, 0, .8);
+      font-size: .65em;
+      line-height: 1.45;
+      background: #f7f7f7;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 .1em white inset;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 .1em #fff inset;
+      margin: 0 .15em;
+      padding: .2em .5em;
+      vertical-align: middle;
+      position: relative;
+      top: -.1em;
+      white-space: nowrap
+    }
+
+    .keyseq kbd:first-child {
+      margin-left: 0
+    }
+
+    .keyseq kbd:last-child {
+      margin-right: 0
+    }
+
+    .menuseq,
+    .menuref {
+      color: #000
+    }
+
+    .menuseq b:not(.caret),
+    .menuref {
+      font-weight: inherit
+    }
+
+    .menuseq {
+      word-spacing: -.02em
+    }
+
+    .menuseq b.caret {
+      font-size: 1.25em;
+      line-height: .8
+    }
+
+    .menuseq i.caret {
+      font-weight: bold;
+      text-align: center;
+      width: .45em
+    }
+
+    b.button::before,
+    b.button::after {
+      position: relative;
+      top: -1px;
+      font-weight: 400
+    }
+
+    b.button::before {
+      content: "[";
+      padding: 0 3px 0 2px
+    }
+
+    b.button::after {
+      content: "]";
+      padding: 0 2px 0 3px
+    }
+
+    p a>code:hover {
+      color: rgba(0, 0, 0, .9)
+    }
+
+    #header,
+    #content,
+    #footnotes,
+    #footer {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: 80%;
+      *zoom: 1;
+      position: relative;
+      padding-left: .9375em;
+      padding-right: .9375em
+    }
+
+    #header::before,
+    #header::after,
+    #content::before,
+    #content::after,
+    #footnotes::before,
+    #footnotes::after,
+    #footer::before,
+    #footer::after {
+      content: " ";
+      display: table
+    }
+
+    #header::after,
+    #content::after,
+    #footnotes::after,
+    #footer::after {
+      clear: both
+    }
+
+    #content {
+      margin-top: 1.25em
+    }
+
+    #content::before {
+      content: none
+    }
+
+    #header>h1:first-child {
+      color: rgba(0, 0, 0, .85);
+      margin-top: 2.25rem;
+      margin-bottom: 0
+    }
+
+    #header>h1:first-child+#toc {
+      margin-top: 8px;
+      border-top: 1px solid #dddddf
+    }
+
+    #header>h1:only-child,
+    body.toc2 #header>h1:nth-last-child(2) {
+      border-bottom: 1px solid #dddddf;
+      padding-bottom: 8px
+    }
+
+    #header .details {
+      border-bottom: 1px solid #dddddf;
+      line-height: 1.45;
+      padding-top: .25em;
+      padding-bottom: .25em;
+      padding-left: .25em;
+      color: rgba(0, 0, 0, .6);
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap
+    }
+
+    #header .details span:first-child {
+      margin-left: -.125em
+    }
+
+    #header .details span.email a {
+      color: rgba(0, 0, 0, .85)
+    }
+
+    #header .details br {
+      display: none
+    }
+
+    #header .details br+span::before {
+      content: "\00a0\2013\00a0"
+    }
+
+    #header .details br+span.author::before {
+      content: "\00a0\22c5\00a0";
+      color: rgba(0, 0, 0, .85)
+    }
+
+    #header .details br+span#revremark::before {
+      content: "\00a0|\00a0"
+    }
+
+    #header #revnumber {
+      text-transform: capitalize
+    }
+
+    #header #revnumber::after {
+      content: "\00a0"
+    }
+
+    #content>h1:first-child:not([class]) {
+      color: rgba(0, 0, 0, .85);
+      border-bottom: 1px solid #dddddf;
+      padding-bottom: 8px;
+      margin-top: 0;
+      padding-top: 1rem;
+      margin-bottom: 1.25rem
+    }
+
+    #toc {
+      border-bottom: 1px solid #e7e7e9;
+      padding-bottom: .5em
+    }
+
+    #toc>ul {
+      margin-left: .125em
+    }
+
+    #toc ul.sectlevel0>li>a {
+      font-style: italic
+    }
+
+    #toc ul.sectlevel0 ul.sectlevel1 {
+      margin: .5em 0
+    }
+
+    #toc ul {
+      font-family: "Open Sans", "DejaVu Sans", sans-serif;
+      list-style-type: none
+    }
+
+    #toc li {
+      line-height: 1.3334;
+      margin-top: .3334em
+    }
+
+    #toc a {
+      text-decoration: none
+    }
+
+    #toc a:active {
+      text-decoration: underline
+    }
+
+    #toctitle {
+      color: #7a2518;
+      font-size: 1.2em
+    }
+
+    @media screen and (min-width:768px) {
+      #toctitle {
+        font-size: 1.375em
+      }
+
+      body.toc2 {
+        padding-left: 15em;
+        padding-right: 0
+      }
+
+      #toc.toc2 {
+        margin-top: 0 !important;
+        background: #f8f8f7;
+        position: fixed;
+        width: 15em;
+        left: 0;
+        top: 0;
+        border-right: 1px solid #e7e7e9;
+        border-top-width: 0 !important;
+        border-bottom-width: 0 !important;
+        z-index: 1000;
+        padding: 1.25em 1em;
+        height: 100%;
+        overflow: auto
+      }
+
+      #toc.toc2 #toctitle {
+        margin-top: 0;
+        margin-bottom: .8rem;
+        font-size: 1.2em
+      }
+
+      #toc.toc2>ul {
+        font-size: .9em;
+        margin-bottom: 0
+      }
+
+      #toc.toc2 ul ul {
+        margin-left: 0;
+        padding-left: 1em
+      }
+
+      #toc.toc2 ul.sectlevel0 ul.sectlevel1 {
+        padding-left: 0;
+        margin-top: .5em;
+        margin-bottom: .5em
+      }
+
+      body.toc2.toc-right {
+        padding-left: 0;
+        padding-right: 15em
+      }
+
+      body.toc2.toc-right #toc.toc2 {
+        border-right-width: 0;
+        border-left: 1px solid #e7e7e9;
+        left: auto;
+        right: 0
+      }
+    }
+
+    @media screen and (min-width:1280px) {
+      body.toc2 {
+        padding-left: 20em;
+        padding-right: 0
+      }
+
+      #toc.toc2 {
+        width: 20em
+      }
+
+      #toc.toc2 #toctitle {
+        font-size: 1.375em
+      }
+
+      #toc.toc2>ul {
+        font-size: .95em
+      }
+
+      #toc.toc2 ul ul {
+        padding-left: 1.25em
+      }
+
+      body.toc2.toc-right {
+        padding-left: 0;
+        padding-right: 20em
+      }
+    }
+
+    #content #toc {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #e0e0dc;
+      margin-bottom: 1.25em;
+      padding: 1.25em;
+      background: #f8f8f7;
+      -webkit-border-radius: 4px;
+      border-radius: 4px
+    }
+
+    #content #toc>:first-child {
+      margin-top: 0
+    }
+
+    #content #toc>:last-child {
+      margin-bottom: 0
+    }
+
+    #footer {
+      max-width: 100%;
+      background: rgba(0, 0, 0, .8);
+      padding: 1.25em
+    }
+
+    #footer-text {
+      color: rgba(255, 255, 255, .8);
+      line-height: 1.44
+    }
+
+    #content {
+      margin-bottom: .625em
+    }
+
+    .sect1 {
+      padding-bottom: .625em
+    }
+
+    @media screen and (min-width:768px) {
+      #content {
+        margin-bottom: 1.25em
+      }
+
+      .sect1 {
+        padding-bottom: 1.25em
+      }
+    }
+
+    .sect1:last-child {
+      padding-bottom: 0
+    }
+
+    .sect1+.sect1 {
+      border-top: 1px solid #e7e7e9
+    }
+
+    #content h1>a.anchor,
+    h2>a.anchor,
+    h3>a.anchor,
+    #toctitle>a.anchor,
+    .sidebarblock>.content>.title>a.anchor,
+    h4>a.anchor,
+    h5>a.anchor,
+    h6>a.anchor {
+      position: absolute;
+      z-index: 1001;
+      width: 1.5ex;
+      margin-left: -1.5ex;
+      display: block;
+      text-decoration: none !important;
+      visibility: hidden;
+      text-align: center;
+      font-weight: 400
+    }
+
+    #content h1>a.anchor::before,
+    h2>a.anchor::before,
+    h3>a.anchor::before,
+    #toctitle>a.anchor::before,
+    .sidebarblock>.content>.title>a.anchor::before,
+    h4>a.anchor::before,
+    h5>a.anchor::before,
+    h6>a.anchor::before {
+      content: "\00A7";
+      font-size: .85em;
+      display: block;
+      padding-top: .1em
+    }
+
+    #content h1:hover>a.anchor,
+    #content h1>a.anchor:hover,
+    h2:hover>a.anchor,
+    h2>a.anchor:hover,
+    h3:hover>a.anchor,
+    #toctitle:hover>a.anchor,
+    .sidebarblock>.content>.title:hover>a.anchor,
+    h3>a.anchor:hover,
+    #toctitle>a.anchor:hover,
+    .sidebarblock>.content>.title>a.anchor:hover,
+    h4:hover>a.anchor,
+    h4>a.anchor:hover,
+    h5:hover>a.anchor,
+    h5>a.anchor:hover,
+    h6:hover>a.anchor,
+    h6>a.anchor:hover {
+      visibility: visible
+    }
+
+    #content h1>a.link,
+    h2>a.link,
+    h3>a.link,
+    #toctitle>a.link,
+    .sidebarblock>.content>.title>a.link,
+    h4>a.link,
+    h5>a.link,
+    h6>a.link {
+      color: #ba3925;
+      text-decoration: none
+    }
+
+    #content h1>a.link:hover,
+    h2>a.link:hover,
+    h3>a.link:hover,
+    #toctitle>a.link:hover,
+    .sidebarblock>.content>.title>a.link:hover,
+    h4>a.link:hover,
+    h5>a.link:hover,
+    h6>a.link:hover {
+      color: #a53221
+    }
+
+    details,
+    .audioblock,
+    .imageblock,
+    .literalblock,
+    .listingblock,
+    .stemblock,
+    .videoblock {
+      margin-bottom: 1.25em
+    }
+
+    details>summary:first-of-type {
+      cursor: pointer;
+      display: list-item;
+      outline: none;
+      margin-bottom: .75em
+    }
+
+    .admonitionblock td.content>.title,
+    .audioblock>.title,
+    .exampleblock>.title,
+    .imageblock>.title,
+    .listingblock>.title,
+    .literalblock>.title,
+    .stemblock>.title,
+    .openblock>.title,
+    .paragraph>.title,
+    .quoteblock>.title,
+    table.tableblock>.title,
+    .verseblock>.title,
+    .videoblock>.title,
+    .dlist>.title,
+    .olist>.title,
+    .ulist>.title,
+    .qlist>.title,
+    .hdlist>.title {
+      text-rendering: optimizeLegibility;
+      text-align: left;
+      font-family: "Noto Serif", "DejaVu Serif", serif;
+      font-size: 1rem;
+      font-style: italic
+    }
+
+    table.tableblock.fit-content>caption.title {
+      white-space: nowrap;
+      width: 0
+    }
+
+    .paragraph.lead>p,
+    #preamble>.sectionbody>[class="paragraph"]:first-of-type p {
+      font-size: 1.21875em;
+      line-height: 1.6;
+      color: rgba(0, 0, 0, .85)
+    }
+
+    table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p {
+      font-size: inherit
+    }
+
+    .admonitionblock>table {
+      border-collapse: separate;
+      border: 0;
+      background: none;
+      width: 100%
+    }
+
+    .admonitionblock>table td.icon {
+      text-align: center;
+      width: 80px
+    }
+
+    .admonitionblock>table td.icon img {
+      max-width: none
+    }
+
+    .admonitionblock>table td.icon .title {
+      font-weight: bold;
+      font-family: "Open Sans", "DejaVu Sans", sans-serif;
+      text-transform: uppercase
+    }
+
+    .admonitionblock>table td.content {
+      padding-left: 1.125em;
+      padding-right: 1.25em;
+      border-left: 1px solid #dddddf;
+      color: rgba(0, 0, 0, .6)
+    }
+
+    .admonitionblock>table td.content>:last-child>:last-child {
+      margin-bottom: 0
+    }
+
+    .exampleblock>.content {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #e6e6e6;
+      margin-bottom: 1.25em;
+      padding: 1.25em;
+      background: #fff;
+      -webkit-border-radius: 4px;
+      border-radius: 4px
+    }
+
+    .exampleblock>.content>:first-child {
+      margin-top: 0
+    }
+
+    .exampleblock>.content>:last-child {
+      margin-bottom: 0
+    }
+
+    .sidebarblock {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #dbdbd6;
+      margin-bottom: 1.25em;
+      padding: 1.25em;
+      background: #f3f3f2;
+      -webkit-border-radius: 4px;
+      border-radius: 4px
+    }
+
+    .sidebarblock>:first-child {
+      margin-top: 0
+    }
+
+    .sidebarblock>:last-child {
+      margin-bottom: 0
+    }
+
+    .sidebarblock>.content>.title {
+      color: #7a2518;
+      margin-top: 0;
+      text-align: center
+    }
+
+    .exampleblock>.content>:last-child>:last-child,
+    .exampleblock>.content .olist>ol>li:last-child>:last-child,
+    .exampleblock>.content .ulist>ul>li:last-child>:last-child,
+    .exampleblock>.content .qlist>ol>li:last-child>:last-child,
+    .sidebarblock>.content>:last-child>:last-child,
+    .sidebarblock>.content .olist>ol>li:last-child>:last-child,
+    .sidebarblock>.content .ulist>ul>li:last-child>:last-child,
+    .sidebarblock>.content .qlist>ol>li:last-child>:last-child {
+      margin-bottom: 0
+    }
+
+    .literalblock pre,
+    .listingblock>.content>pre {
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      word-wrap: break-word;
+      overflow-x: auto;
+      padding: 1em;
+      font-size: .8125em
+    }
+
+    @media screen and (min-width:768px) {
+
+      .literalblock pre,
+      .listingblock>.content>pre {
+        font-size: .90625em
+      }
+    }
+
+    @media screen and (min-width:1280px) {
+
+      .literalblock pre,
+      .listingblock>.content>pre {
+        font-size: 1em
+      }
+    }
+
+    .literalblock pre,
+    .listingblock>.content>pre:not(.highlight),
+    .listingblock>.content>pre[class="highlight"],
+    .listingblock>.content>pre[class^="highlight "] {
+      background: #f7f7f8
+    }
+
+    .literalblock.output pre {
+      color: #f7f7f8;
+      background: rgba(0, 0, 0, .9)
+    }
+
+    .listingblock>.content {
+      position: relative
+    }
+
+    .listingblock code[data-lang]::before {
+      display: none;
+      content: attr(data-lang);
+      position: absolute;
+      font-size: .75em;
+      top: .425rem;
+      right: .5rem;
+      line-height: 1;
+      text-transform: uppercase;
+      color: inherit;
+      opacity: .5
+    }
+
+    .listingblock:hover code[data-lang]::before {
+      display: block
+    }
+
+    .listingblock.terminal pre .command::before {
+      content: attr(data-prompt);
+      padding-right: .5em;
+      color: inherit;
+      opacity: .5
+    }
+
+    .listingblock.terminal pre .command:not([data-prompt])::before {
+      content: "$"
+    }
+
+    .listingblock pre.highlightjs {
+      padding: 0
+    }
+
+    .listingblock pre.highlightjs>code {
+      padding: 1em;
+      -webkit-border-radius: 4px;
+      border-radius: 4px
+    }
+
+    .listingblock pre.prettyprint {
+      border-width: 0
+    }
+
+    .prettyprint {
+      background: #f7f7f8
+    }
+
+    pre.prettyprint .linenums {
+      line-height: 1.45;
+      margin-left: 2em
+    }
+
+    pre.prettyprint li {
+      background: none;
+      list-style-type: inherit;
+      padding-left: 0
+    }
+
+    pre.prettyprint li code[data-lang]::before {
+      opacity: 1
+    }
+
+    pre.prettyprint li:not(:first-child) code[data-lang]::before {
+      display: none
+    }
+
+    table.linenotable {
+      border-collapse: separate;
+      border: 0;
+      margin-bottom: 0;
+      background: none
+    }
+
+    table.linenotable td[class] {
+      color: inherit;
+      vertical-align: top;
+      padding: 0;
+      line-height: inherit;
+      white-space: normal
+    }
+
+    table.linenotable td.code {
+      padding-left: .75em
+    }
+
+    table.linenotable td.linenos {
+      border-right: 1px solid currentColor;
+      opacity: .35;
+      padding-right: .5em
+    }
+
+    pre.pygments .lineno {
+      border-right: 1px solid currentColor;
+      opacity: .35;
+      display: inline-block;
+      margin-right: .75em
+    }
+
+    pre.pygments .lineno::before {
+      content: "";
+      margin-right: -.125em
+    }
+
+    .quoteblock {
+      margin: 0 1em 1.25em 1.5em;
+      display: table
+    }
+
+    .quoteblock>.title {
+      margin-left: -1.5em;
+      margin-bottom: .75em
+    }
+
+    .quoteblock blockquote,
+    .quoteblock p {
+      color: rgba(0, 0, 0, .85);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      word-spacing: .1em;
+      letter-spacing: 0;
+      font-style: italic;
+      text-align: justify
+    }
+
+    .quoteblock blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+
+    .quoteblock blockquote::before {
+      content: "\201c";
+      float: left;
+      font-size: 2.75em;
+      font-weight: bold;
+      line-height: .6em;
+      margin-left: -.6em;
+      color: #7a2518;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+    }
+
+    .quoteblock blockquote>.paragraph:last-child p {
+      margin-bottom: 0
+    }
+
+    .quoteblock .attribution {
+      margin-top: .75em;
+      margin-right: .5ex;
+      text-align: right
+    }
+
+    .verseblock {
+      margin: 0 1em 1.25em
+    }
+
+    .verseblock pre {
+      font-family: "Open Sans", "DejaVu Sans", sans;
+      font-size: 1.15rem;
+      color: rgba(0, 0, 0, .85);
+      font-weight: 300;
+      text-rendering: optimizeLegibility
+    }
+
+    .verseblock pre strong {
+      font-weight: 400
+    }
+
+    .verseblock .attribution {
+      margin-top: 1.25rem;
+      margin-left: .5ex
+    }
+
+    .quoteblock .attribution,
+    .verseblock .attribution {
+      font-size: .9375em;
+      line-height: 1.45;
+      font-style: italic
+    }
+
+    .quoteblock .attribution br,
+    .verseblock .attribution br {
+      display: none
+    }
+
+    .quoteblock .attribution cite,
+    .verseblock .attribution cite {
+      display: block;
+      letter-spacing: -.025em;
+      color: rgba(0, 0, 0, .6)
+    }
+
+    .quoteblock.abstract blockquote::before,
+    .quoteblock.excerpt blockquote::before,
+    .quoteblock .quoteblock blockquote::before {
+      display: none
+    }
+
+    .quoteblock.abstract blockquote,
+    .quoteblock.abstract p,
+    .quoteblock.excerpt blockquote,
+    .quoteblock.excerpt p,
+    .quoteblock .quoteblock blockquote,
+    .quoteblock .quoteblock p {
+      line-height: 1.6;
+      word-spacing: 0
+    }
+
+    .quoteblock.abstract {
+      margin: 0 1em 1.25em;
+      display: block
+    }
+
+    .quoteblock.abstract>.title {
+      margin: 0 0 .375em;
+      font-size: 1.15em;
+      text-align: center
+    }
+
+    .quoteblock.excerpt,
+    .quoteblock .quoteblock {
+      margin: 0 0 1.25em;
+      padding: 0 0 .25em 1em;
+      border-left: .25em solid #dddddf
+    }
+
+    .quoteblock.excerpt blockquote,
+    .quoteblock.excerpt p,
+    .quoteblock .quoteblock blockquote,
+    .quoteblock .quoteblock p {
+      color: inherit;
+      font-size: 1.0625rem
+    }
+
+    .quoteblock.excerpt .attribution,
+    .quoteblock .quoteblock .attribution {
+      color: inherit;
+      text-align: left;
+      margin-right: 0
+    }
+
+    table.tableblock {
+      max-width: 100%;
+      border-collapse: separate
+    }
+
+    p.tableblock:last-child {
+      margin-bottom: 0
+    }
+
+    td.tableblock>.content>:last-child {
+      margin-bottom: -1.25em
+    }
+
+    td.tableblock>.content>:last-child.sidebarblock {
+      margin-bottom: 0
+    }
+
+    table.tableblock,
+    th.tableblock,
+    td.tableblock {
+      border: 0 solid #dedede
+    }
+
+    table.grid-all>thead>tr>.tableblock,
+    table.grid-all>tbody>tr>.tableblock {
+      border-width: 0 1px 1px 0
+    }
+
+    table.grid-all>tfoot>tr>.tableblock {
+      border-width: 1px 1px 0 0
+    }
+
+    table.grid-cols>*>tr>.tableblock {
+      border-width: 0 1px 0 0
+    }
+
+    table.grid-rows>thead>tr>.tableblock,
+    table.grid-rows>tbody>tr>.tableblock {
+      border-width: 0 0 1px
+    }
+
+    table.grid-rows>tfoot>tr>.tableblock {
+      border-width: 1px 0 0
+    }
+
+    table.grid-all>*>tr>.tableblock:last-child,
+    table.grid-cols>*>tr>.tableblock:last-child {
+      border-right-width: 0
+    }
+
+    table.grid-all>tbody>tr:last-child>.tableblock,
+    table.grid-all>thead:last-child>tr>.tableblock,
+    table.grid-rows>tbody>tr:last-child>.tableblock,
+    table.grid-rows>thead:last-child>tr>.tableblock {
+      border-bottom-width: 0
+    }
+
+    table.frame-all {
+      border-width: 1px
+    }
+
+    table.frame-sides {
+      border-width: 0 1px
+    }
+
+    table.frame-topbot,
+    table.frame-ends {
+      border-width: 1px 0
+    }
+
+    table.stripes-all tr,
+    table.stripes-odd tr:nth-of-type(odd),
+    table.stripes-even tr:nth-of-type(even),
+    table.stripes-hover tr:hover {
+      background: #f8f8f7
+    }
+
+    th.halign-left,
+    td.halign-left {
+      text-align: left
+    }
+
+    th.halign-right,
+    td.halign-right {
+      text-align: right
+    }
+
+    th.halign-center,
+    td.halign-center {
+      text-align: center
+    }
+
+    th.valign-top,
+    td.valign-top {
+      vertical-align: top
+    }
+
+    th.valign-bottom,
+    td.valign-bottom {
+      vertical-align: bottom
+    }
+
+    th.valign-middle,
+    td.valign-middle {
+      vertical-align: middle
+    }
+
+    table thead th,
+    table tfoot th {
+      font-weight: bold
+    }
+
+    tbody tr th {
+      display: table-cell;
+      line-height: 1.6;
+      background: #f7f8f7
+    }
+
+    tbody tr th,
+    tbody tr th p,
+    tfoot tr th,
+    tfoot tr th p {
+      color: rgba(0, 0, 0, .8);
+      font-weight: bold
+    }
+
+    p.tableblock>code:only-child {
+      background: none;
+      padding: 0
+    }
+
+    p.tableblock {
+      font-size: 1em
+    }
+
+    ol {
+      margin-left: 1.75em
+    }
+
+    ul li ol {
+      margin-left: 1.5em
+    }
+
+    dl dd {
+      margin-left: 1.125em
+    }
+
+    dl dd:last-child,
+    dl dd:last-child>:last-child {
+      margin-bottom: 0
+    }
+
+    ol>li p,
+    ul>li p,
+    ul dd,
+    ol dd,
+    .olist .olist,
+    .ulist .ulist,
+    .ulist .olist,
+    .olist .ulist {
+      margin-bottom: .625em
+    }
+
+    ul.checklist,
+    ul.none,
+    ol.none,
+    ul.no-bullet,
+    ol.no-bullet,
+    ol.unnumbered,
+    ul.unstyled,
+    ol.unstyled {
+      list-style-type: none
+    }
+
+    ul.no-bullet,
+    ol.no-bullet,
+    ol.unnumbered {
+      margin-left: .625em
+    }
+
+    ul.unstyled,
+    ol.unstyled {
+      margin-left: 0
+    }
+
+    ul.checklist {
+      margin-left: .625em
+    }
+
+    ul.checklist li>p:first-child>.fa-square-o:first-child,
+    ul.checklist li>p:first-child>.fa-check-square-o:first-child {
+      width: 1.25em;
+      font-size: .8em;
+      position: relative;
+      bottom: .125em
+    }
+
+    ul.checklist li>p:first-child>input[type="checkbox"]:first-child {
+      margin-right: .25em
+    }
+
+    ul.inline {
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      list-style: none;
+      margin: 0 0 .625em -1.25em
+    }
+
+    ul.inline>li {
+      margin-left: 1.25em
+    }
+
+    .unstyled dl dt {
+      font-weight: 400;
+      font-style: normal
+    }
+
+    ol.arabic {
+      list-style-type: decimal
+    }
+
+    ol.decimal {
+      list-style-type: decimal-leading-zero
+    }
+
+    ol.loweralpha {
+      list-style-type: lower-alpha
+    }
+
+    ol.upperalpha {
+      list-style-type: upper-alpha
+    }
+
+    ol.lowerroman {
+      list-style-type: lower-roman
+    }
+
+    ol.upperroman {
+      list-style-type: upper-roman
+    }
+
+    ol.lowergreek {
+      list-style-type: lower-greek
+    }
+
+    .hdlist>table,
+    .colist>table {
+      border: 0;
+      background: none
+    }
+
+    .hdlist>table>tbody>tr,
+    .colist>table>tbody>tr {
+      background: none
+    }
+
+    td.hdlist1,
+    td.hdlist2 {
+      vertical-align: top;
+      padding: 0 .625em
+    }
+
+    td.hdlist1 {
+      font-weight: bold;
+      padding-bottom: 1.25em
+    }
+
+    .literalblock+.colist,
+    .listingblock+.colist {
+      margin-top: -.5em
+    }
+
+    .colist td:not([class]):first-child {
+      padding: .4em .75em 0;
+      line-height: 1;
+      vertical-align: top
+    }
+
+    .colist td:not([class]):first-child img {
+      max-width: none
+    }
+
+    .colist td:not([class]):last-child {
+      padding: .25em 0
+    }
+
+    .thumb,
+    .th {
+      line-height: 0;
+      display: inline-block;
+      border: solid 4px #fff;
+      -webkit-box-shadow: 0 0 0 1px #ddd;
+      box-shadow: 0 0 0 1px #ddd
+    }
+
+    .imageblock.left {
+      margin: .25em .625em 1.25em 0
+    }
+
+    .imageblock.right {
+      margin: .25em 0 1.25em .625em
+    }
+
+    .imageblock>.title {
+      margin-bottom: 0
+    }
+
+    .imageblock.thumb,
+    .imageblock.th {
+      border-width: 6px
+    }
+
+    .imageblock.thumb>.title,
+    .imageblock.th>.title {
+      padding: 0 .125em
+    }
+
+    .image.left,
+    .image.right {
+      margin-top: .25em;
+      margin-bottom: .25em;
+      display: inline-block;
+      line-height: 0
+    }
+
+    .image.left {
+      margin-right: .625em
+    }
+
+    .image.right {
+      margin-left: .625em
+    }
+
+    a.image {
+      text-decoration: none;
+      display: inline-block
+    }
+
+    a.image object {
+      pointer-events: none
+    }
+
+    sup.footnote,
+    sup.footnoteref {
+      font-size: .875em;
+      position: static;
+      vertical-align: super
+    }
+
+    sup.footnote a,
+    sup.footnoteref a {
+      text-decoration: none
+    }
+
+    sup.footnote a:active,
+    sup.footnoteref a:active {
+      text-decoration: underline
+    }
+
+    #footnotes {
+      padding-top: .75em;
+      padding-bottom: .75em;
+      margin-bottom: .625em
+    }
+
+    #footnotes hr {
+      width: 20%;
+      min-width: 6.25em;
+      margin: -.25em 0 .75em;
+      border-width: 1px 0 0
+    }
+
+    #footnotes .footnote {
+      padding: 0 .375em 0 .225em;
+      line-height: 1.3334;
+      font-size: .875em;
+      margin-left: 1.2em;
+      margin-bottom: .2em
+    }
+
+    #footnotes .footnote a:first-of-type {
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: -1.05em
+    }
+
+    #footnotes .footnote:last-of-type {
+      margin-bottom: 0
+    }
+
+    #content #footnotes {
+      margin-top: -.625em;
+      margin-bottom: 0;
+      padding: .75em 0
+    }
+
+    .gist .file-data>table {
+      border: 0;
+      background: #fff;
+      width: 100%;
+      margin-bottom: 0
+    }
+
+    .gist .file-data>table td.line-data {
+      width: 99%
+    }
+
+    div.unbreakable {
+      page-break-inside: avoid
+    }
+
+    .big {
+      font-size: larger
+    }
+
+    .small {
+      font-size: smaller
+    }
+
+    .underline {
+      text-decoration: underline
+    }
+
+    .overline {
+      text-decoration: overline
+    }
+
+    .line-through {
+      text-decoration: line-through
+    }
+
+    .aqua {
+      color: #00bfbf
+    }
+
+    .aqua-background {
+      background: #00fafa
+    }
+
+    .black {
+      color: #000
+    }
+
+    .black-background {
+      background: #000
+    }
+
+    .blue {
+      color: #0000bf
+    }
+
+    .blue-background {
+      background: #0000fa
+    }
+
+    .fuchsia {
+      color: #bf00bf
+    }
+
+    .fuchsia-background {
+      background: #fa00fa
+    }
+
+    .gray {
+      color: #606060
+    }
+
+    .gray-background {
+      background: #7d7d7d
+    }
+
+    .green {
+      color: #006000
+    }
+
+    .green-background {
+      background: #007d00
+    }
+
+    .lime {
+      color: #00bf00
+    }
+
+    .lime-background {
+      background: #00fa00
+    }
+
+    .maroon {
+      color: #600000
+    }
+
+    .maroon-background {
+      background: #7d0000
+    }
+
+    .navy {
+      color: #000060
+    }
+
+    .navy-background {
+      background: #00007d
+    }
+
+    .olive {
+      color: #606000
+    }
+
+    .olive-background {
+      background: #7d7d00
+    }
+
+    .purple {
+      color: #600060
+    }
+
+    .purple-background {
+      background: #7d007d
+    }
+
+    .red {
+      color: #bf0000
+    }
+
+    .red-background {
+      background: #fa0000
+    }
+
+    .silver {
+      color: #909090
+    }
+
+    .silver-background {
+      background: #bcbcbc
+    }
+
+    .teal {
+      color: #006060
+    }
+
+    .teal-background {
+      background: #007d7d
+    }
+
+    .white {
+      color: #bfbfbf
+    }
+
+    .white-background {
+      background: #fafafa
+    }
+
+    .yellow {
+      color: #bfbf00
+    }
+
+    .yellow-background {
+      background: #fafa00
+    }
+
+    span.icon>.fa {
+      cursor: default
+    }
+
+    a span.icon>.fa {
+      cursor: inherit
+    }
+
+    .admonitionblock td.icon [class^="fa icon-"] {
+      font-size: 2.5em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+      cursor: default
+    }
+
+    .admonitionblock td.icon .icon-note::before {
+      content: "\f05a";
+      color: #19407c
+    }
+
+    .admonitionblock td.icon .icon-tip::before {
+      content: "\f0eb";
+      text-shadow: 1px 1px 2px rgba(155, 155, 0, .8);
+      color: #111
+    }
+
+    .admonitionblock td.icon .icon-warning::before {
+      content: "\f071";
+      color: #bf6900
+    }
+
+    .admonitionblock td.icon .icon-caution::before {
+      content: "\f06d";
+      color: #bf3400
+    }
+
+    .admonitionblock td.icon .icon-important::before {
+      content: "\f06a";
+      color: #bf0000
+    }
+
+    .conum[data-value] {
+      display: inline-block;
+      color: #fff !important;
+      background: rgba(0, 0, 0, .8);
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
+      text-align: center;
+      font-size: .75em;
+      width: 1.67em;
+      height: 1.67em;
+      line-height: 1.67em;
+      font-family: "Open Sans", "DejaVu Sans", sans-serif;
+      font-style: normal;
+      font-weight: bold
+    }
+
+    .conum[data-value] * {
+      color: #fff !important
+    }
+
+    .conum[data-value]+b {
+      display: none
+    }
+
+    .conum[data-value]::after {
+      content: attr(data-value)
+    }
+
+    pre .conum[data-value] {
+      position: relative;
+      top: -.125em
+    }
+
+    b.conum * {
+      color: inherit !important
+    }
+
+    .conum:not([data-value]):empty {
+      display: none
+    }
+
+    dt,
+    th.tableblock,
+    td.content,
+    div.footnote {
+      text-rendering: optimizeLegibility
+    }
+
+    h1,
+    h2,
+    p,
+    td.content,
+    span.alt {
+      letter-spacing: -.01em
+    }
+
+    p strong,
+    td.content strong,
+    div.footnote strong {
+      letter-spacing: -.005em
+    }
+
+    p,
+    blockquote,
+    dt,
+    td.content,
+    span.alt {
+      font-size: 1.0625rem
+    }
+
+    p {
+      margin-bottom: 1.25rem
+    }
+
+    .sidebarblock p,
+    .sidebarblock dt,
+    .sidebarblock td.content,
+    p.tableblock {
+      font-size: 1em
+    }
+
+    .exampleblock>.content {
+      background: #fffef7;
+      border-color: #e0e0dc;
+      -webkit-box-shadow: 0 1px 4px #e0e0dc;
+      box-shadow: 0 1px 4px #e0e0dc
+    }
+
+    .print-only {
+      display: none !important
+    }
+
+    @page {
+      margin: 1.25cm .75cm
+    }
+
+    @media print {
+      * {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+      }
+
+      html {
+        font-size: 80%
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: underline !important
+      }
+
+      a.bare,
+      a[href^="#"],
+      a[href^="mailto:"] {
+        text-decoration: none !important
+      }
+
+      a[href^="http:"]:not(.bare)::after,
+      a[href^="https:"]:not(.bare)::after {
+        content: "("attr(href) ")";
+        display: inline-block;
+        font-size: .875em;
+        padding-left: .25em
+      }
+
+      abbr[title]::after {
+        content: " ("attr(title) ")"
+      }
+
+      pre,
+      blockquote,
+      tr,
+      img,
+      object,
+      svg {
+        page-break-inside: avoid
+      }
+
+      thead {
+        display: table-header-group
+      }
+
+      svg {
+        max-width: 100%
+      }
+
+      p,
+      blockquote,
+      dt,
+      td.content {
+        font-size: 1em;
+        orphans: 3;
+        widows: 3
+      }
+
+      h2,
+      h3,
+      #toctitle,
+      .sidebarblock>.content>.title {
+        page-break-after: avoid
+      }
+
+      #toc,
+      .sidebarblock,
+      .exampleblock>.content {
+        background: none !important
+      }
+
+      #toc {
+        border-bottom: 1px solid #dddddf !important;
+        padding-bottom: 0 !important
+      }
+
+      body.book #header {
+        text-align: center
+      }
+
+      body.book #header>h1:first-child {
+        border: 0 !important;
+        margin: 2.5em 0 1em
+      }
+
+      body.book #header .details {
+        border: 0 !important;
+        display: block;
+        padding: 0 !important
+      }
+
+      body.book #header .details span:first-child {
+        margin-left: 0 !important
+      }
+
+      body.book #header .details br {
+        display: block
+      }
+
+      body.book #header .details br+span::before {
+        content: none !important
+      }
+
+      body.book #toc {
+        border: 0 !important;
+        text-align: left !important;
+        padding: 0 !important;
+        margin: 0 !important
+      }
+
+      body.book #toc,
+      body.book #preamble,
+      body.book h1.sect0,
+      body.book .sect1>h2 {
+        page-break-before: always
+      }
+
+      .listingblock code[data-lang]::before {
+        display: block
+      }
+
+      #footer {
+        padding: 0 .9375em
+      }
+
+      .hide-on-print {
+        display: none !important
+      }
+
+      .print-only {
+        display: block !important
+      }
+
+      .hide-for-print {
+        display: none !important
+      }
+
+      .show-for-print {
+        display: inherit !important
+      }
+    }
+
+    @media print,
+    amzn-kf8 {
+      #header>h1:first-child {
+        margin-top: 1.25rem
+      }
+
+      .sect1 {
+        padding: 0 !important
+      }
+
+      .sect1+.sect1 {
+        border: 0
+      }
+
+      #footer {
+        background: none
+      }
+
+      #footer-text {
+        color: rgba(0, 0, 0, .6);
+        font-size: .9em
+      }
+    }
+
+    @media amzn-kf8 {
+
+      #header,
+      #content,
+      #footnotes,
+      #footer {
+        padding: 0
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="article">
+  <div id="header">
+    <h1><strong>Friday Booster</strong></h1>
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/0.png" alt="0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="trueobjectifs"><a class="anchor" href="#trueobjectifs"></a><strong>Objectifs</strong></h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p>Les objectifs de cette session sont :</p>
+        </div>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>Appréhender le fonctionnement de Docker, ce que l’outil permet de faire.</p>
+            </li>
+            <li>
+              <p>Comprendre dans quels contextes peut être mise en œuvre une stack Docker.</p>
+            </li>
+            <li>
+              <p>Monter vos (premières) stack Docker !</p>
+            </li>
+            <li>
+              <p>Utiliser docker-compose.</p>
+            </li>
+            <li>
+              <p>Refaire les exercices via une IHM <strong>Portainer</strong>.</p>
+            </li>
+            <li>
+              <p>Exploiter la puissance de <strong>Swarm</strong>.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="truequelques-rappels"><a class="anchor" href="#truequelques-rappels"></a><strong>Quelques rappels</strong>
+      </h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p><strong>Docker</strong> est un outil qui peut empaqueter une application et ses dépendances dans un
+            conteneur isolé, qui pourra être exécuté sur n&#8217;importe quel serveur.</p>
+        </div>
+        <div class="paragraph">
+          <p>Une <strong>image</strong> Docker est une <strong>représentation statique</strong> de l’application ou du
+            service, de leur configuration et de leurs dépendances.</p>
+        </div>
+        <div class="paragraph">
+          <p>Un <strong>conteneur</strong> correspond à l’<strong>instanciation d’une image docker</strong>.
+            C’est-à-dire, selon l’image instanciée, qu’un conteneur correspond à une instance d’un système
+            d’exploitation contenant des produits et des livrables (binaires, configuration).</p>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="truedéroulement-de-la-session"><a class="anchor"
+          href="#truedéroulement-de-la-session"></a><strong>Déroulement de la session</strong></h2>
+      <div class="sectionbody">
+        <div class="paragraph">
+          <p>Cette session se déroule en plusieurs exercices :</p>
+        </div>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>Créez votre propre image à partir d’un DockerFile.</p>
+            </li>
+            <li>
+              <p>Docker-compose.</p>
+            </li>
+            <li>
+              <p>Portainer.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="admonitionblock note">
+          <table>
+            <tr>
+              <td class="icon">
+                <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>Pour adapter la complexité de ce TP au niveau de chacun, des astuces/aides vous sont données. pour cela dérouler les sections Aide.</pre>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <details>
+          <summary class="title">Aide</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>Test astuces/aides.</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="trueprise-en-main-de-docker-montez-vos-premiers-conteneurs"><a class="anchor"
+          href="#trueprise-en-main-de-docker-montez-vos-premiers-conteneurs"></a><strong>Prise en main de
+          <em>Docker</em>, montez vos premiers conteneurs !</strong></h2>
+      <div class="sectionbody">
+        <div class="sect2">
+          <h3 id="trueprincipales-commandes"><a class="anchor" href="#trueprincipales-commandes"></a><strong>Principales
+              commandes</strong></h3>
+          <div class="paragraph">
+            <p>Ce premier exercice a pour objectif de vous aider à appréhender les principales commandes Docker :</p>
+          </div>
+          <table class="tableblock frame-all grid-all stretch">
+            <caption class="title">Table 1. Principales commandes</caption>
+            <colgroup>
+              <col style="width: 50%;">
+              <col style="width: 50%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tableblock halign-left valign-top">Commande</th>
+                <th class="tableblock halign-left valign-top">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker pull &lt;nom_image[:tag]&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Télécharge l’image indiquée (sur le Docker Hub), avec possibilité de préciser le
+                    tag (la version).</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker run [-d] [-p X:Y] &lt;nom_image&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <div class="content">
+                    <div class="paragraph">
+                      <p>Instancie un conteneur à partir de l’image indiquée.</p>
+                    </div>
+                    <div class="paragraph">
+                      <p>Remarque : si l’image n’est pas disponible localement, un « docker pull » est automatiquement
+                        exécuté.</p>
+                    </div>
+                    <div class="ulist">
+                      <ul>
+                        <li>
+                          <p>L’option « -d » permet de lancer le conteneur en tâche de fond et rendre la main à
+                            l’utilisateur.</p>
+                        </li>
+                        <li>
+                          <p>L’option « -p X:Y » permet de déclarer une redirection du port X du serveur hôte (du nœud)
+                            vers le port Y du conteneur.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker ps</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Liste les conteneurs instanciés, leur état, etc.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker start/stop &lt;UID_ou_début_UID&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Démarre ou arrête un conteneur (sans le supprimer).</p>
+                  <p class="tableblock">Remarque : il n’est pas nécessaire de saisir l’IUD en entier, les 2/3 premiers
+                    caractères de l’UID suffisent (s’il n’y a pas d’ambiguïté entre plusieurs conteneurs).</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker rm &lt;UID_ou_début_UID&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Supprime un conteneur.</p>
+                  <p class="tableblock">Remarque : il faut préalablement stopper un conteneur pour le supprimer.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker attach &lt;UID_ou_début_UID&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Dans le cas où le conteneur a été lancé en tâche de fond (option -d), ouvre la
+                    console du conteneur.</p>
+                  <p class="tableblock">Pour détacher la console, utiliser le raccourci CTRL+C.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">docker exec –it &lt;UID_ou_début_UID&gt; &lt;commande&gt;</p>
+                </td>
+                <td class="tableblock halign-left valign-top">
+                  <p class="tableblock">Exécute une commande dans un conteneur. Il peut être utile d’ouvrir un invité de
+                    commande « dans le conteneur » via la commande docker exec –it &lt;UID_ou_début_UID&gt; /bin/bash .
+                    Taper « exit » pour sortir du conteneur.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sect2">
+          <h3 id="truepremier-conteneur"><a class="anchor" href="#truepremier-conteneur"></a><strong>Premier
+              conteneur</strong></h3>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="images/10.png" alt="10" width="900" height="600">
+            </div>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Instancier un nœud.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Sur ce nœud, démarrer en tâche de fond un conteneur à
+                  partir de l’image Docker Hub <a href="https://hub.docker.com/r/strm/helloworld-http/" target="_blank"
+                    rel="noopener">strm/helloworld-http</a></p>
+                <div class="ulist">
+                  <ul>
+                    <li>
+                      <p>Penser à déclarer une <strong>redirection du port 80 de la machine vers le port 80 du
+                          conteneur</strong> (de façon à pouvoir joindre le conteneur depuis l’extérieur).</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Utiliser la commande $docker run</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Pour déclarer une redirection du port: -p 80:80</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker run -d -p 80:80 strm/helloworld-http</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="paragraph">
+            <p>Si le conteneur est correctement instancié, ouvrez un navigateur et rentré l'url suivant : http://host.docker.internal/</p>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Vous devriez observé ce message : </p>
+              </li>
+            </ul>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="images/9.png" alt="9" width="682" height="314">
+            </div>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Lister les conteneurs instanciés et noter les premiers
+                  caractères de l’UID.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker ps</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Stopper le conteneur.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker stop &lt;UID_ou_début_UID&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Supprimer le conteneur.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker rm &lt;UID_ou_début_UID&gt;</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="sect2">
+          <h3 id="truecréez-votre-propre-image"><a class="anchor" href="#truecréez-votre-propre-image"></a><strong>Créez
+              votre propre image</strong></h3>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="images/7.png" alt="7">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Dans cet exercice, l’objectif est d’instancier vos propres images Docker à partir d’images standards
+              issues du DockerHub et des ressources du TP.</p>
+          </div>
+          <div class="paragraph">
+            <p>Il s’agit de créer une image <code><strong>tomcat-sample</strong></code> à partir de l’image
+              <code><strong>tomcat:jdk8</strong></code> en y ajoutant un fichier WAR (application Web JAVA) puis
+              d’instancier un conteneur à partir de cette image.</p>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="images/11.png" alt="11" width="682" height="314">
+            </div>
+          </div>
+          <div class="paragraph">
+            <p>Pour cela:</p>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Inspecter le contenu du répertoire
+                  <code><strong>dockerfile</strong></code>.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Compléter le fichier
+                  <code><strong>Dockerfile</strong></code>, suivant les mentions <code><strong>TODO</strong></code>
+                  qu’il contient.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="listingblock">
+            <div class="title">Dockerfile</div>
+            <div class="content">
+              <pre class="highlightjs highlight"><code data-lang="Dockerfile" class="language-Dockerfile hljs">#TODO : Se baser sur l'image tomcat:jdk8
+
+#TODO : Déposer le fichier sample.war dans le répertoire webapps de tomcat : /usr/local/tomcat/webapps/</code></pre>
+            </div>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Utiliser le mots-clé « FROM » pour indiquer l’image d’origine.</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Utiliser le mots-clé « COPY » pour déposer le fichier WAR sous /usr/local/tomcat/webapps/.</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>#TODO : Se baser sur l'image tomcat:jdk8
+FROM tomcat:jdk8
+#TODO : Déposer le fichier sample.war dans le répertoire webapps de tomcat : /usr/local/tomcat/webapps/
+COPY ./sample.war /usr/local/tomcat/webapps/</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="paragraph">
+            <p>Par la suite:</p>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> A l’aide de la commande
+                  <code><strong>docker build</strong></code>, créer à partir du <code><strong>Dockerfile</strong></code>
+                  une nouvelle image dont le nom est <code><strong>tomcat-sample</strong></code>.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker build --help
+ -t : Name and optionally a tag in the 'name:tag' format.</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Le dernier paramètre pour la commande docker build est le &lt;&lt; . &gt;&gt; ce qui signifie le répertoire actuel, il doit correspondre à la localisation du dockerfile</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Se positionner dans le répertoire du Dockerfile et exécuter la commande:
+$docker build -t tomcat-sample .</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Instancier un conteneur à partir de l’image
+                  <code><strong>tomcat-sample</strong></code>, Penser à la redirection de port (cf. schéma plus haut).
+                </p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>$docker run –d –p 80:8080 tomcat-sample</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Consulter la page de l’application (si le port 80
+                  n’apparaît pas dans l’interface « Play with Docker », cliquer sur « Open Port » et saisir « 80 »)</p>
+              </li>
+            </ul>
+          </div>
+          <div class="imageblock text-center">
+            <div class="content">
+              <img src="images/12.png" alt="12" width="682" height="314">
+            </div>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Supprimer le nœud.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="trueet-maintenant-une-stack-avec-compose"><a class="anchor"
+          href="#trueet-maintenant-une-stack-avec-compose"></a><strong>Et maintenant, une stack avec compose !</strong>
+      </h2>
+      <div class="sectionbody">
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/13.jpg" alt="13" width="682" height="314">
+          </div>
+        </div>
+        <div class="paragraph">
+          <p><code><strong>Docker Compose</strong></code> est un outil utilisé pour définir et exécuter des applications
+            Docker multi-conteneurs. il remplace les commandes <code><strong>docker run</strong></code> qui sont
+            exécutées à plusieurs reprises sur chaque conteneur dans une application multi-conteneurs.</p>
+        </div>
+        <div class="paragraph">
+          <p>En utilisant Docker Compose, nous pouvons simplifier l&#8217;exécution d&#8217;applications
+            multi-conteneurs à seulement deux commandes : <code><strong>docker-compose up</strong></code> et
+            <code><strong>docker-compose down</strong></code>.</p>
+        </div>
+        <div class="paragraph">
+          <p>Dans cet exercice, vous apprendrez comment <code><strong>Docker Compose</strong></code> facilite la
+            configuration et l&#8217;exécution de plusieurs conteneurs Docker. À des fins de démonstration, on utilisera
+            des conteneurs <code><strong>Spring Boot</strong></code> et <code><strong>PostgreSQL</strong></code>.</p>
+        </div>
+        <div class="sect2">
+          <h3 id="truedockeriser-le-projet-spring-boot-friday-booster"><a class="anchor"
+              href="#truedockeriser-le-projet-spring-boot-friday-booster"></a><strong>Dockeriser le projet Spring Boot
+              <em>friday-booster</em></strong></h3>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Builder l&#8217;image docker.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="listingblock">
+            <div class="title">CMD</div>
+            <div class="content">
+              <pre
+                class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker build -t friday-booster:latest .</code></pre>
+            </div>
+          </div>
+          <div class="admonitionblock warning">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-warning" title="Warning"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Vous pouvez exécuter l'image Docker du projet Spring Boot friday-booster à l'aide de la commande $docker run, Mais rappelez-vous, nous voulons utiliser Docker Compose pour démarrer tous les services du projet.</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="truedéfinir-le-fichier-docker-compose"><a class="anchor"
+              href="#truedéfinir-le-fichier-docker-compose"></a><strong>Définir le fichier Docker Compose</strong></h3>
+          <div class="paragraph">
+            <p>Maintenant que vous avez dockerisé le projet Spring Boot <code><strong>friday-booster</strong></code> ,
+              vous devez définir un fichier <code><strong>docker-compose.yml</strong></code><br>
+              Ce fichier aura une configuration pour créer une base de données <code><strong>PostgreSQL</strong></code>
+              dans un conteneur Docker et la connecter au conteneur du projet Spring Boot
+              <code><strong>friday-booster</strong></code> pour s&#8217;exécuter en tant qu&#8217;application
+              multi-conteneurs.</p>
+          </div>
+          <div class="admonitionblock tip">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-tip" title="Tip"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>En règle générale, lors de la configuration d'un projet Spring Boot qui se connecte à une source de données, nous utilisons des configurations similaires à celle illustrée ci-dessous dans le fichier application.properties/application.yml du projet :</pre>
+                    </div>
+                  </div>
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>spring.datasource.url = jdbc:postgresql://localhost:5432/fridaybooster
+spring.datasource.username = postgres
+spring.datasource.password = postgres</pre>
+                    </div>
+                  </div>
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Les configurations ci-dessus donneront à Spring Boot un accès à une base de données PostgreSQL. Dans cet exercice, vous allez configurer les configurations ci-dessus avec un fichier
+docker-compose.yml</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Se baser sur la structure suivante pour rédiger le
+                  fichier <code><strong>docker-compose.yml</strong></code></p>
+              </li>
+            </ul>
+          </div>
+          <div class="listingblock">
+            <div class="title">docker-compose.yml</div>
+            <div class="content">
+              <pre class="highlightjs highlight"><code data-lang="yml" class="language-yml hljs">version: "3.8"
+services:
+#======================================
+#======= friday-booster service =======
+#======================================
+  friday-booster:
+
+#==================================
+#======= PostgreSQL service =======
+#==================================
+  PostgreSQL:
+
+#========================
+#======= networks =======
+#========================
+networks:
+  friday_booster_network:
+#=======================
+#======= volumes =======
+#=======================
+volumes:
+  db-data:
+  log-data:</code></pre>
+            </div>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Les configurations ci-dessus définissent la version de Docker Compose et les services dans l'application multi-conteneurs ainsi qu'un networks ayant comme nom "friday_booster_network".</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="admonitionblock important">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-important" title="Important"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Respecter le format YAML du fichier docker-compose.yml .</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="truesection-service-postgresql"><a class="anchor"
+              href="#truesection-service-postgresql"></a><strong>Section service <em>PostgreSQL</em></strong></h3>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Spécifier l&#8217;image
+                  <code><strong>Postgres</strong></code> à partir de laquelle démarrer le container.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>https://hub.docker.com/_/postgres</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>image: postgres:alpine</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Ajouter le service
+                  <code><strong>PostgreSQL</strong></code> au network
+                  <code><strong>friday_booster_network</strong></code>.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>networks : permet de regrouper plusieurs containers entre eux, les groupes ainsi créés sont isolés les uns des autres, ce qui limite les risques et les conflits. A noter qu’un container peut appartenir à zéro ou plusieurs networks.</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>networks:
+    - friday_booster_network</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Renseigner <code><strong>db-data</strong></code> comme
+                  volume pour le service <code><strong>PostgreSQL</strong></code></p>
+              </li>
+            </ul>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Les données générées et utilisées par les Containers ne sont pas conservées après le redémarrage ou la suppression de ces derniers, nous pouvons utiliser les Volumes pour gérer les données dans les Containers afin de résoudre ce problème.</pre>
+                    </div>
+                  </div>
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>https://docs.docker.com/storage/volumes/</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>L'emplacement des fichiers =&gt; /var/lib/postgresql/data</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>volumes:
+  - db-data:/var/lib/postgresql/data/pg_data</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Renseigner les variables de d&#8217;environnement
+                  Postgres</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>POSTGRES_DB
+POSTGRES_USER
+POSTGRES_PASSWORD
+PGDATA=/var/lib/postgresql/data/pg_data</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>environment:
+  - POSTGRES_DB=fridaybooster
+  - POSTGRES_USER=postgres
+  - POSTGRES_PASSWORD=postgres
+  - PGDATA=/var/lib/postgresql/data/pg_data</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Ajouter un Healthcheck</p>
+              </li>
+            </ul>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>L'instruction "healthcheck" indique à Docker comment tester votre container afin de vérifier qu'il fonctionne toujours correctement.</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>pg_isready -U postgres</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>healthcheck:
+  test: ["CMD-SHELL", "pg_isready -U postgres"]
+  interval: 10s
+  timeout: 5s
+  retries: 5</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="sect5">
+            <h6 id="truesolution-service-postgresql"><a class="anchor"
+                href="#truesolution-service-postgresql"></a><strong>Solution service PostgreSQL</strong></h6>
+            <details>
+              <summary class="title">Solution service PostgreSQL</summary>
+              <div class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>PostgreSQL:
+    image: postgres:alpine
+    networks:
+        - friday_booster_network
+    volumes:
+        - db-data:/var/lib/postgresql/data/pg_data
+    environment:
+        - POSTGRES_DB=fridaybooster
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - PGDATA=/var/lib/postgresql/data/pg_data
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U postgres"]
+        interval: 10s
+        timeout: 5s
+        retries: 5</pre>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="truesection-service-friday-booster"><a class="anchor"
+              href="#truesection-service-friday-booster"></a><strong>Section service <em>friday-booster</em></strong>
+          </h3>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Spécifier l’image
+                  <code><strong>friday-booster</strong></code> précédemment créée, à partir de laquelle démarrer le
+                  container.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>image: friday-booster:latest</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Faire une redirection de port</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Le port par défaut est le 9191</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>ports:
+  - 9191:9191</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Ajouter le service
+                  <code><strong>friday-booster</strong></code> au network
+                  <code><strong>friday_booster_network</strong></code>.</p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>networks:
+  - friday_booster_network</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Renseigner <code><strong>log-data</strong></code>
+                  comme volume pour le service <code><strong>friday_booster</strong></code></p>
+              </li>
+            </ul>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>L'emplacement des fichiers de Logs =&gt; /var/log/fridaybooster</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>volumes:
+   - log-data:/var/log/fridaybooster</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Renseigner les variables de d&#8217;environnement
+                  Spring Boot</p>
+              </li>
+            </ul>
+          </div>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Chaque nouveau service porte un nom, et ce nom est enregistré auprès d'un DNS, chaque container du service se voit affecter un resolver DNS.
+Pour faire simple un service est joignable par son nom, sous condition d’être sur le même réseau.</pre>
+                    </div>
+                  </div>
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>Exemple : jdbc:postgresql://{NOM_DU_SERVICE_POSTGRES}:5432</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>SPRING_DATASOURCE_URL
+SPRING_DATASOURCE_USERNAME
+SPRING_DATASOURCE_PASSWORD
+SPRING_PROFILES_ACTIVE=dev</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>environment:
+ - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+ - SPRING_DATASOURCE_USERNAME=postgres
+ - SPRING_DATASOURCE_PASSWORD=postgres
+ - SPRING_PROFILES_ACTIVE=dev</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="admonitionblock note">
+            <table>
+              <tr>
+                <td class="icon">
+                  <i class="fa icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                  <div class="literalblock">
+                    <div class="content">
+                      <pre>depends_on: force la commande $docker-compose up, à démarrer les services dans l'ordre des dépendances.</pre>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="ulist checklist">
+            <ul class="checklist">
+              <li>
+                <p><input type="checkbox" data-item-complete="0"> Renseigner le <code><strong>depends_on</strong></code>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <details>
+            <summary class="title">Aide</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>Le service friday-booster dépend du service PostgreSQL.</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary class="title">Solution</summary>
+            <div class="content">
+              <div class="literalblock">
+                <div class="content">
+                  <pre>depends_on:
+  - PostgreSQL</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="sect5">
+            <h6 id="truesolution-service-friday-booster"><a class="anchor"
+                href="#truesolution-service-friday-booster"></a><strong>Solution service friday-booster</strong></h6>
+            <details>
+              <summary class="title">Solution service friday-booster</summary>
+              <div class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>friday-booster:
+    image: friday-booster:latest
+    ports:
+        - 9191:9191
+    networks:
+        - friday_booster_network
+    volumes:
+        - log-data:/var/log/fridaybooster
+    environment:
+        - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+        - SPRING_DATASOURCE_USERNAME=postgres
+        - SPRING_DATASOURCE_PASSWORD=postgres
+        - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+        - PostgreSQL</pre>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+          <div class="sect5">
+            <h6 id="truesolution-docker-compose-yml"><a class="anchor"
+                href="#truesolution-docker-compose-yml"></a><strong>Solution docker-compose.yml</strong></h6>
+            <details>
+              <summary class="title">Solution docker-compose.yml</summary>
+              <div class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>version: "3.8"
+services:
+#======================================
+#======= friday-booster service =======
+#======================================
+  friday-booster:
+    image: friday-booster:latest
+    ports:
+      - 9191:9191
+    networks:
+      - friday_booster_network
+    volumes:
+      - log-data:/var/log/fridaybooster
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+      - PostgreSQL
+#==================================
+#======= PostgreSQL service =======
+#==================================
+  PostgreSQL:
+    image: postgres:alpine
+    networks:
+      - friday_booster_network
+    volumes:
+      - db-data:/var/lib/postgresql/data/pg_data
+    environment:
+      - POSTGRES_DB=fridaybooster
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pg_data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+#========================
+#======= networks =======
+#========================
+networks:
+  friday_booster_network:
+#=======================
+#======= volumes =======
+#=======================
+volumes:
+  db-data:
+  log-data:</pre>
+                  </div>
+                </div>
+              </div>
+            </details>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Déposer le fichier
+                    <code><strong>docker-compose.yml</strong></code> sous
+                    <code><strong>/home/friday-booster</strong></code>, et exécuter :</p>
+                </li>
+              </ul>
+            </div>
+            <div class="listingblock">
+              <div class="title">CMD</div>
+              <div class="content">
+                <pre
+                  class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker-compose up -d</code></pre>
+              </div>
+            </div>
+            <div class="admonitionblock note">
+              <table>
+                <tr>
+                  <td class="icon">
+                    <i class="fa icon-note" title="Note"></i>
+                  </td>
+                  <td class="content">
+                    <div class="literalblock">
+                      <div class="content">
+                        <pre>docker-compose up -d =&gt; Create and start containers, and run containers in the background.</pre>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Trouver l&#8217;emplacement des logs du WS.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="imageblock text-center">
+              <div class="content">
+                <img src="images/22.png" alt="22" width="682" height="314">
+              </div>
+            </div>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Vérifier les logs du WS.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="imageblock text-center">
+              <div class="content">
+                <img src="images/23.png" alt="23">
+              </div>
+            </div>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Tester le WS
+                    <code><strong>friday_booster</strong></code>.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="imageblock text-center">
+              <div class="content">
+                <img src="images/14.png" alt="14" width="682" height="314">
+              </div>
+            </div>
+            <table class="tableblock frame-all grid-all stretch">
+              <colgroup>
+                <col style="width: 33.3333%;">
+                <col style="width: 33.3333%;">
+                <col style="width: 33.3334%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="tableblock halign-left valign-top">URL</th>
+                  <th class="tableblock halign-left valign-top">HTTP</th>
+                  <th class="tableblock halign-left valign-top">Body</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">${BASE_URL}/fridaybooster/api/actuator/health</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">GET</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top"></td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">${BASE_URL}/fridaybooster/api/post</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">GET</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top"></td>
+                </tr>
+                <tr>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">${BASE_URL}/fridaybooster/api/post</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">POST</p>
+                  </td>
+                  <td class="tableblock halign-left valign-top">
+                    <p class="tableblock">{
+                      "title": "test",
+                      "description": "test"
+                      }</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="imageblock text-center">
+              <div class="content">
+                <img src="images/19.png" alt="19" width="682" height="314">
+              </div>
+            </div>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Stopper et supprimer les containers.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="listingblock">
+              <div class="title">CMD</div>
+              <div class="content">
+                <pre
+                  class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker-compose down</code></pre>
+              </div>
+            </div>
+            <div class="ulist checklist">
+              <ul class="checklist">
+                <li>
+                  <p><input type="checkbox" data-item-complete="0"> Supprimer le nœud.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="trueswarm-et-si-on-passait-à-léchelle-supérieure"><a class="anchor"
+          href="#trueswarm-et-si-on-passait-à-léchelle-supérieure"></a><strong>Swarm, et si on passait à l’échelle
+          supérieure !</strong></h2>
+      <div class="sectionbody">
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/20.png" alt="20" width="682" height="314">
+          </div>
+        </div>
+        <div class="paragraph">
+          <p>La gestion de plusieurs conteneurs peut être très pénible; c&#8217;est là que
+            <code><strong>Docker Swarm</strong></code> vous aide. Il gère et orchestre le cluster, exécutant facilement
+            plusieurs containers sur plusieurs nœuds Docker.</p>
+        </div>
+        <div class="paragraph">
+          <p>Voici quelques-unes de ses caractéristiques:</p>
+        </div>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p><strong>La haute disponibilité:</strong> vise à n&#8217;offrir aucun temps d&#8217;arrêt ou panne.</p>
+            </li>
+            <li>
+              <p><strong>L&#8217;équilibrage de charge:</strong> allouez automatiquement les ressources et les demandes
+                sur les autres nœuds du cluster en cas de défaillance d&#8217;un nœud.</p>
+            </li>
+            <li>
+              <p><strong>Décentralisé:</strong> plusieurs nœuds <strong>Manager</strong> s&#8217;exécutent, par
+                conséquent, le cluster ne dépend jamais d&#8217;un seul nœud <strong>Manager</strong>.</p>
+            </li>
+            <li>
+              <p><strong>Évolutivité:</strong> à l&#8217;aide d&#8217;une seule commande docker swarm, vous pouvez
+                facilement augmenter ou réduire les conteneurs dans le cluster.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="paragraph">
+          <p>Dans cet exercice on va mettre en place un cluster de <code><strong>3 Managers</strong></code> et
+            <code><strong>2 Workers</strong></code>, comme décrit dans le schéma suivant.</p>
+        </div>
+        <div class="admonitionblock tip">
+          <table>
+            <tr>
+              <td class="icon">
+                <i class="fa icon-tip" title="Tip"></i>
+              </td>
+              <td class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>Par contrainte de temps, on peut opter pour la fonctionnalité offerte par "Play With Docker", pour créer le cluster.
+Les étapes sont décrites après le schéma.</pre>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/21.png" alt="21">
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Créer un cluster de
+                <code><strong>3 Managers</strong></code> et <code><strong>2 Workers</strong></code> sur
+                <code><strong>Play With Docker</strong></code>.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/24.png" alt="24" width="682" height="314">
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Lister les nœuds du cluster
+                <code><strong>Swarm</strong></code></p>
+            </li>
+          </ul>
+        </div>
+        <div class="listingblock">
+          <div class="title">CMD</div>
+          <div class="content">
+            <pre
+              class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker node ls</code></pre>
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/25.png" alt="25" width="682" height="314">
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Installer Visualizer</p>
+            </li>
+          </ul>
+        </div>
+        <div class="admonitionblock note">
+          <table>
+            <tr>
+              <td class="icon">
+                <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>Swarm Visualizer est un outil qui aide à visualiser les services Docker fonctionnant sur Swarm dans un diagramme.</pre>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>Sur l&#8217;un des <code><strong>3 Managers</strong></code>, exécuter :</p>
+            </li>
+          </ul>
+        </div>
+        <div class="listingblock">
+          <div class="title">CMD</div>
+          <div class="content">
+            <pre class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker service create \
+  --name=swarm-visualizer \
+  --publish=8080:8080/tcp \
+  --constraint=node.role==manager \
+  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  dockersamples/visualizer</code></pre>
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/26.png" alt="26" width="682" height="314">
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Builder l’image docker
+                <code><strong>friday-booster</strong></code> sur les <code><strong>2 Workers</strong></code>.</p>
+              <div class="olist arabic">
+                <ol class="arabic">
+                  <li>
+                    <p>Déposer les fichiers <code><strong>friday-booster.jar</strong></code> et
+                      <code><strong>Dockerfile</strong></code> sur les <code><strong>2 Workers</strong></code>.</p>
+                  </li>
+                  <li>
+                    <p>Sur les <code><strong>2 Workers</strong></code>, Exécuter :</p>
+                  </li>
+                </ol>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="listingblock">
+          <div class="title">CMD</div>
+          <div class="content">
+            <pre
+              class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker build -t friday-booster:latest .</code></pre>
+          </div>
+        </div>
+        <div class="admonitionblock important">
+          <table>
+            <tr>
+              <td class="icon">
+                <i class="fa icon-important" title="Important"></i>
+              </td>
+              <td class="content">
+                <div class="literalblock">
+                  <div class="content">
+                    <pre>Basez-vous sur le fichier docker-compose.yml de l'exercice précédant, afin d'ajouter les éléments suivant.</pre>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Pour le service
+                <code><strong>friday-booster</strong></code>:</p>
+              <div class="ulist">
+                <ul>
+                  <li>
+                    <p>Le nombre de replica est de 2.</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <details>
+          <summary class="title">Solution</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>replicas: 2</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>Le service est déployé seulement sur des <code><strong>Workers</strong></code>.</p>
+            </li>
+          </ul>
+        </div>
+        <details>
+          <summary class="title">Solution</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>placement:
+   constraints: [node.role == worker]</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary class="title">Solution service friday-booster</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>friday-booster:
+  image: friday-booster:latest
+  ports:
+    - 9191:9191
+  networks:
+    - friday_booster_network
+  volumes:
+    - log-data:/var/log/fridaybooster
+  environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+    - SPRING_DATASOURCE_USERNAME=postgres
+    - SPRING_DATASOURCE_PASSWORD=postgres
+    - SPRING_PROFILES_ACTIVE=dev
+  depends_on:
+    - PostgreSQL
+  deploy:
+      replicas: 2
+      placement:
+          constraints: [node.role == worker]</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Pour le service
+                <code><strong>PostgreSQL</strong></code>:</p>
+              <div class="ulist">
+                <ul>
+                  <li>
+                    <p>Le nombre de replica est de 1.</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <details>
+          <summary class="title">Solution</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>replicas: 1</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="ulist">
+          <ul>
+            <li>
+              <p>Le service est déployé seulement sur des <code><strong>managers</strong></code>.</p>
+            </li>
+          </ul>
+        </div>
+        <details>
+          <summary class="title">Solution</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>placement:
+   constraints: [node.role == manager]</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary class="title">Solution service PostgreSQL</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>PostgreSQL:
+  image: postgres:alpine
+  networks:
+    - friday_booster_network
+  volumes:
+    - db-data:/var/lib/postgresql/data/pg_data
+  environment:
+    - POSTGRES_DB=fridaybooster
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - PGDATA=/var/lib/postgresql/data/pg_data
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U postgres"]
+    interval: 10s
+    timeout: 5s
+    retries: 5
+  deploy:
+      replicas: 1
+      placement:
+          constraints: [node.role == manager]</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary class="title">Solution docker-compose.yml</summary>
+          <div class="content">
+            <div class="literalblock">
+              <div class="content">
+                <pre>version: "3.8"
+services:
+#======================================
+#======= friday-booster service =======
+#======================================
+  friday-booster:
+    image: friday-booster:latest
+    ports:
+      - 9191:9191
+    networks:
+      - friday_booster_network
+    volumes:
+      - log-data:/var/log/fridaybooster
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/fridaybooster
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+      - PostgreSQL
+    deploy:
+        replicas: 2
+        placement:
+            constraints: [node.role == worker]
+#==================================
+#======= PostgreSQL service =======
+#==================================
+  PostgreSQL:
+    image: postgres:alpine
+    networks:
+      - friday_booster_network
+    volumes:
+      - db-data:/var/lib/postgresql/data/pg_data
+    environment:
+      - POSTGRES_DB=fridaybooster
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pg_data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    deploy:
+        replicas: 1
+        placement:
+            constraints: [node.role == manager]
+#========================
+#======= networks =======
+#========================
+networks:
+  friday_booster_network:
+#=======================
+#======= volumes =======
+#=======================
+volumes:
+  db-data:
+  log-data:</pre>
+              </div>
+            </div>
+          </div>
+        </details>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Déposer le fichier
+                <code><strong>docker-compose.yml</strong></code> sur l&#8217;un des
+                <code><strong>managers</strong></code></p>
+            </li>
+          </ul>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Déployer une nouvelle stack.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="listingblock">
+          <div class="title">CMD</div>
+          <div class="content">
+            <pre
+              class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker stack deploy -c docker-compose.yml fridaybooster-stack</code></pre>
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Vérifier Swarm Visualizer.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/27.png" alt="27">
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Tester le WS
+                <code><strong>friday_booster</strong></code>.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sect1">
+      <h2 id="trueportainer"><a class="anchor" href="#trueportainer"></a><strong>Portainer</strong></h2>
+      <div class="sectionbody">
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/28.png" alt="28" width="900" height="600">
+          </div>
+        </div>
+        <div class="paragraph">
+          <p>Portainer est une solution graphique qui permet d’administrer/superviser les containeurs. Elle exploite
+            l’api REST fourni par docker Engaine pour réaliser ces actions.</p>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Installer <strong>Portainer</strong></p>
+            </li>
+          </ul>
+        </div>
+        <div class="listingblock">
+          <div class="title">CMD</div>
+          <div class="content">
+            <pre
+              class="highlightjs highlight"><code data-lang="shell" class="language-shell hljs">$ docker run -d --name portainer-friday_booster --restart=always -p 19000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></pre>
+          </div>
+        </div>
+        <div class="ulist checklist">
+          <ul class="checklist">
+            <li>
+              <p><input type="checkbox" data-item-complete="0"> Refaire le 1er exercice avec <strong>Portainer</strong>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/29.png" alt="29" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/30.png" alt="30" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/31.png" alt="31" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/32.png" alt="32" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/33.png" alt="33" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/34.png" alt="34" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/35.png" alt="35" width="682" height="314">
+          </div>
+        </div>
+        <div class="imageblock text-center">
+          <div class="content">
+            <img src="images/thanks.png" alt="thanks">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footer-text">
+      Last updated 2021-11-15 09:50:07 +0100
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlighting()</script>
+</body>
+
+</html>
