@@ -8,7 +8,7 @@ Tutorial to get started with docker
 
 Using the following link [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-## Install Docker <img src="https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Moby-logo.png?itok=sYH_JEaJ" width="50"/>
+## Install Docker <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width="50"/>
 
 ```bash
 $ chmod +x ./install-docker-wsl2.sh
