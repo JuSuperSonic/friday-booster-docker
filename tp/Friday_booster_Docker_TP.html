@@ -2979,8 +2979,7 @@ $docker build -t tomcat-sample .</pre>
           <div class="ulist checklist">
             <ul class="checklist">
               <li>
-                <p><input type="checkbox" data-item-complete="0"> Consulter la page de l’application (si le port 80
-                  n’apparaît pas dans l’interface « Play with Docker », cliquer sur « Open Port » et saisir « 80 »)</p>
+                <p><input type="checkbox" data-item-complete="0"> Consulter la page de l’application http://host.docker.internal/sample</p>
               </li>
             </ul>
           </div>
@@ -3747,15 +3746,10 @@ volumes:
             <div class="ulist checklist">
               <ul class="checklist">
                 <li>
-                  <p><input type="checkbox" data-item-complete="0"> Tester le WS
+                  <p><input type="checkbox" data-item-complete="0"> Tester le WS 
                     <code><strong>friday_booster</strong></code>.</p>
                 </li>
               </ul>
-            </div>
-            <div class="imageblock text-center">
-              <div class="content">
-                <img src="images/14.png" alt="14" width="682" height="314">
-              </div>
             </div>
             <table class="tableblock frame-all grid-all stretch">
               <colgroup>
@@ -3773,7 +3767,7 @@ volumes:
               <tbody>
                 <tr>
                   <td class="tableblock halign-left valign-top">
-                    <p class="tableblock">${BASE_URL}/fridaybooster/api/actuator/health</p>
+                    <p class="tableblock">http://host.docker.internal:9191/fridaybooster/api/actuator/health</p>
                   </td>
                   <td class="tableblock halign-left valign-top">
                     <p class="tableblock">GET</p>
@@ -3782,7 +3776,7 @@ volumes:
                 </tr>
                 <tr>
                   <td class="tableblock halign-left valign-top">
-                    <p class="tableblock">${BASE_URL}/fridaybooster/api/post</p>
+                    <p class="tableblock">http://host.docker.internal:9191/fridaybooster/api/post</p>
                   </td>
                   <td class="tableblock halign-left valign-top">
                     <p class="tableblock">GET</p>
@@ -3791,7 +3785,7 @@ volumes:
                 </tr>
                 <tr>
                   <td class="tableblock halign-left valign-top">
-                    <p class="tableblock">${BASE_URL}/fridaybooster/api/post</p>
+                    <p class="tableblock">http://host.docker.internal:9191/fridaybooster/api/post</p>
                   </td>
                   <td class="tableblock halign-left valign-top">
                     <p class="tableblock">POST</p>
